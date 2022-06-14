@@ -35,6 +35,10 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .page {
   font-family: "Roboto", sans-serif;
   background-color: var(--primary-white-color);
@@ -168,13 +172,22 @@ img {
 
 /* Шапка */
 .section-page {
-  height: 600px;
+  min-height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   align-items: center;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   background-color: var(--secondary-bc-color);
   text-align: center;
@@ -219,7 +232,7 @@ button {
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
-  color: var(--primery-white-color);
+  color: var(--primary-white-color);
   background-color: var(--accent-text);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -493,6 +506,13 @@ button {
   margin-bottom: 30px;
 }
 
+.portfolio-work-item:focus,
+.portfolio-work-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  color: #000000;
+}
+
 .portfolio-work-link {
   color: inherit;
 }
@@ -520,6 +540,12 @@ button {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
+
+/* .portfolio-work-link:hover,
+.portfolio-work-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
 
 /* Подвал */
 .footer {
